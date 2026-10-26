@@ -42,3 +42,5 @@ class Asistente{
     method bandasVisitadas() = historialDeEntradas.map({entrada => entrada.nombreBanda()}).asSet()
 
 }
+
+class ExcepcionFondosInsuficientes inherits Exception{}
