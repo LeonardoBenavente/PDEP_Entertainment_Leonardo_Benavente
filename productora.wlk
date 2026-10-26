@@ -18,12 +18,6 @@ object productora{
             return 0
     }
 
-    // Genera una entrada y la devuelva al asistente
-    method generarEntrada(banda, fecha) {
-      const entrada = new Entrada(nombreBanda = banda, fechaConcierto = fecha, impuesto = impuestoEntradas)
-      return entrada
-    }
-
     // Añade el valor del abono al dinero recaudado
     method cobrarEntrada(abono){
         dineroRecaudado += abono

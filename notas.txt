@@ -9,6 +9,6 @@ ejemplo.comprarEntrada("PTV", new Date(year = 2023))
 ejemplo.comprarEntrada("SWS", new Date(year = 2025))
 
 // falta ver:
-// - Si impuesto en Entrada es una var o una const
-// - Esta bien que retorne la entrada luego de comparla?
-// - Ver si entradasAnioAnterior() esta bien si devuelve una lista de 'an Entrada' ?
+// - Si impuesto en Entrada es una var o una const - Quitar impuesto de Entradas y directamente buscarlo en la productora
+// - Esta bien que retorne la entrada luego de comparla? - NO! Usar Throw Exception
+// - Ver si entradasAnioAnterior() esta bien si devuelve una lista de 'an Entrada' ? - Esta bien por como lo defini. Añadido: Declarar el new entrada directo en el asistente
