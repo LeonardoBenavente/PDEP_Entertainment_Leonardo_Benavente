@@ -1,0 +1,14 @@
+const ejemplo = new Asistente(tipoAbono = "vip", dineroDisponible = 5000)
+
+ejemplo.comprarEntrada("Iron Maiden", new Date())
+ejemplo.comprarEntrada("BMTH", new Date(year = 2025))
+ejemplo.comprarEntrada("a7x", new Date(year = 2024))
+ejemplo.comprarEntrada("MCR", new Date(year = 2025))
+ejemplo.comprarEntrada("LP", new Date(year = 2023))
+ejemplo.comprarEntrada("PTV", new Date(year = 2023))
+ejemplo.comprarEntrada("SWS", new Date(year = 2025))
+
+// falta ver:
+// - Si impuesto en Entrada es una var o una const
+// - Esta bien que retorne la entrada luego de comparla?
+// - Ver si entradasAnioAnterior() esta bien si devuelve una lista de 'an Entrada' ?
