@@ -19,7 +19,6 @@ class Asistente{
         }
     }
 
-
     // Determina el abono final de la entrada
     method abonarEntrada(entrada) {
         const descuento = productora.descuentoEntrada(tipoAbono)                          // Obtengo el descuento segun el tipo de abono
@@ -27,5 +26,18 @@ class Asistente{
         productora.cobrarEntrada(abono)                                                 // Abona el valor final de la entrada
         dineroDisponible -= abono                                                      // Resta el valor del abono al dinero disponible
     }
+
+    // Devuelve todas las entradas del año anterior
+    method entradasAnioAnterior(){
+        const fechaHoy = new Date()
+        const anioPasado = fechaHoy.year() - 1  // Obtiene el año anterior
+
+        // Filtra las entradas que sean del año anterior
+        return historialDeEntradas.filter({entrada => entrada.esDelAnio(anioPasado)})
+
+    } 
+
+    // Devuelve todas las bandas que alguna vez visito
+    method bandasVisitadas() = historialDeEntradas.map({entrada => entrada.nombreBanda()}).asSet()
 
 }
