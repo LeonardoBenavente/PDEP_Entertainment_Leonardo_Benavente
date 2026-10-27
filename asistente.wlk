@@ -8,15 +8,16 @@ class Asistente{
 
     // Verifica si puede comprar una entrada y sus efectos
     method comprarEntrada(banda, fecha) {
-        if (dineroDisponible > 0) {
-            const entrada = new Entrada(nombreBanda = banda, fechaConcierto = fecha)  // Genera la entrada para la banda. Punto corregido en clase
-            self.abonarEntrada(entrada)                             // Realiza el abono de la entrada a la productora
-            historialDeEntradas.add(entrada)                       // Añade la entrada al historial
-            
-            return entrada  // Muestra la nueva entrada 
-        } else {
-            return "No tiene los fondos para comprar la entrada" // Reemplazarlo por el throw exception  // Notifica que no puede comprar la nueva entrada
-        }
+        // Si no tiene los fondos suficientes, lanza una excepción
+        if(dineroDisponible <= 0)
+            throw new ExcepcionFondosInsuficientes(message = "No dispone de los fondos para comprar la entrada")
+
+        const entrada = new Entrada(nombreBanda = banda, fechaConcierto = fecha)  // Genera la entrada para la banda. Punto corregido en clase
+        self.abonarEntrada(entrada)                             // Realiza el abono de la entrada a la productora
+        historialDeEntradas.add(entrada)                       // Añade la entrada al historial
+        
+        return entrada  // Muestra la nueva entrada 
+        
     }
 
     // Determina el abono final de la entrada
@@ -43,4 +44,5 @@ class Asistente{
 
 }
 
+// Excepción para los fondos insuficientes
 class ExcepcionFondosInsuficientes inherits Exception{}
