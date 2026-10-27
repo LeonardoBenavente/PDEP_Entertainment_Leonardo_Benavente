@@ -1,12 +1,12 @@
 import productora.productora
 
 class Entrada {
-    const nombreBanda
+    const banda
     const fechaConcierto
     const precioBase = 1000
 
-    // Devuelve el nombre de la banda
-    method nombreBanda() = nombreBanda
+    // Devuelve la banda
+    method banda() = banda
 
     // Devuelve la fecha del concierto
     method fechaConcierto() = fechaConcierto
@@ -18,6 +18,6 @@ class Entrada {
     method esDelAnio(anio) = self.anioDelConcierto() == anio
 
     // Calcula el precio al público de la entrada agregando el impuesto
-    method precioAlPublico() = precioBase + productora.impuestoEntradas() //productora.impuesto
+    method precioAlPublico() = precioBase + productora.impuestoEntradas() 
 }
 
