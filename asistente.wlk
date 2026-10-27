@@ -14,10 +14,7 @@ class Asistente{
 
         const entrada = new Entrada(nombreBanda = banda, fechaConcierto = fecha)  // Genera la entrada para la banda. Punto corregido en clase
         self.abonarEntrada(entrada)                             // Realiza el abono de la entrada a la productora
-        historialDeEntradas.add(entrada)                       // Añade la entrada al historial
-        
-        return entrada  // Muestra la nueva entrada 
-        
+        historialDeEntradas.add(entrada)                       // Añade la entrada al historial       
     }
 
     // Determina el abono final de la entrada
